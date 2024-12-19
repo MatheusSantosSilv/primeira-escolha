@@ -6,9 +6,7 @@
 <style>
     .welcomeBg {
         display: flex;
-        background-image: url('/images/bghome.webp');
-        background-repeat: no-repeat;
-        background-size: cover;
+        
     }
 
 
@@ -303,27 +301,20 @@
         outline: none;
         border: 1px solid rgb(202, 202, 202);
     }
+
+    .bgHome{
+        background-image: url('/images/bghome.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 70%;
+    }
 </style>
 
 <body class="welcomeBg">
     @include('include.nav')
     <div class="container">
-        <section id="section-topo">
-            <div class="welcome-display">
-                <div class="welcome-wrap">
-                    <div class="align-logo">
-                        <img src="{{ asset('images/logo-branca.svg') }}">
-                        <div class="replaceable-text">
-                            <h1>
-                                Primeira Escolha
-                            </h1>
-                        </div>
-                        <h1 id="replaceable">
-                            jóias.
-                        </h1>
-                    </div>
-                </div>
-            </div>
+        <section class="bgHome"id="section-topo">
+           
         </section>
         <section class="section-2">
             <div class="title">COMPRE POR CATEGORIAS</div>

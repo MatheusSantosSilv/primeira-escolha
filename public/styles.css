@@ -1,3 +1,5 @@
+
+/*Estilo dos elementos globais abaixo*/
 * {
   box-sizing: border-box;
   font-family: 'EB Garamond';
@@ -23,19 +25,43 @@ body {
 
 }
 
+.checked {
+  color: orange;
+}
 
 nav {
   z-index: 2;
   position: sticky;
   top: 0;
+  flex-direction: column;
   background-color: rgb(255, 255, 255);
   align-items: center;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 10%;
+  height: 150px;
   border-bottom: 1px solid rgb(241, 241, 241);
   overflow: visible;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
+  height: 30%;
+}
+
+.top-nav {
+  border-bottom: 1px solid rgb(236, 236, 236);
+  height: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 2%;
+  padding-right: 2%;
+  width: 100%;
+  background-color: white;
 }
 
 nav li {
@@ -55,16 +81,17 @@ nav ul {
 .nav-logo {
   float: left;
   display: flex;
-  padding: 0.5%;
-  justify-content: left;
-  width: fit-content;
+  justify-content: center;
   height: 100%;
+  width: 60%;
 }
 
 .nav-img-logo {
+  display: flex;
   height: 100%;
-  width: 45px
+  width: 100%
 }
+
 .collapse-target-catalogo {
   opacity: 0;
   pointer-events: none;
@@ -72,6 +99,7 @@ nav ul {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  border-bottom: 1px solid rgb(236, 236, 236);
   border-top: 1px solid rgb(236, 236, 236);
   position: absolute;
   width: 100%;
@@ -84,12 +112,12 @@ nav ul {
   transition: 0.2s;
 }
 
-.collapse-catalogo-itens{
+.collapse-catalogo-itens {
   display: grid;
   width: 40%;
-  grid-template-rows: repeat(3, auto); /* 4 linhas fixas por coluna */
-  grid-auto-flow: column; /* Distribui os itens em colunas primeiro */
-  gap: 20px; /* Espaçamento entre os itens */
+  grid-template-rows: repeat(3, auto);
+  grid-auto-flow: column;
+  gap: 20px;
 }
 
 .collapse-catalogo-itens span {
@@ -102,10 +130,10 @@ nav ul {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 0; /* Inicia sem largura */
-  height: 1px; /* Altura da borda */
+  width: 0;
+  height: 1px;
   background-color: black;
-  transition: width 0.3s ease; /* Transição suave para aumentar a largura */
+  transition: width 0.3s ease;
 }
 
 .collapse-catalogo-itens span:hover {
@@ -144,7 +172,7 @@ nav ul {
   pointer-events: none;
   transition: 0.1s ease;
   z-index: 2;
-  top: 100%;
+  top: 50%;
 
 }
 
@@ -212,7 +240,7 @@ section {
   display: flex;
   justify-content: space-around;
   height: fit-content;
-  width: 15%;
+  width: 20%;
   margin: 0;
 }
 
@@ -378,9 +406,9 @@ footer {
 }
 
 .pesquisa-container {
-  width: 30%;
+  width: 20%;
   display: flex;
-  height: 70%;
+  height: 40%;
   align-items: center;
   position: relative;
   border: 1px solid rgb(235, 235, 235)
